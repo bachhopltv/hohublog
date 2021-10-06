@@ -1,19 +1,33 @@
 
+<!DOCTYPE html> 
+<html lang="en">
+ <head>
+ 	
+	<meta charset="UTF-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+   	<title>My Blog</title> 
+</head> 
 
 
 
-<h1>Post</h1>
-<div class="row">
-	<div class="col-md-12">
-		{% if posts %}
 
-			{% for post in posts %}
-				<h4>{{ post.title }}</h4><br/>
-				<p>{{ post.body }}<p>
-			{% endfor %}
+<body>
+	<header>
+	       <h1>My Personal Blog</h1>
+	</header>
 
-		{% else %}
-			I can't recognise the code above.
-		{% endif %}
-	</div>
-</div>
+    <div class="container">
+       	{% block content %}
+         	{% for post in object_list %}
+             	<div class="post">
+             		<h3><a href="">{{ post.title }}</a></h3>
+               		<p>{{ post.body }}</p>
+            	</div>
+         	{% endfor %}
+        {% endblock content %}
+    </div>
+</body>
+
+
+
