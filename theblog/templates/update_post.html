@@ -7,7 +7,9 @@
 {% block content %}
 
 	<h1>Update Post...</h1>
-	<br/><br/>
+	
+	<small><a href="{% url 'delete_post' post.pk %}">Delete</a></small>
+	<br/><br/><br/>
 	<div class="mb-3">
 		<form method="POST">
 			{% csrf_token %}
