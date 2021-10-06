@@ -12,3 +12,10 @@ class HomeView(ListView):
 class ArticleDetailView(DetailView):
 	model = Post
 	template_name = 'article_details.html'
+
+def home_list_view(request):
+	queryset = Post.objects.all() # list of objects
+	context_name = {
+		"object_list": queryset
+	}
+	return render(request, "home.html", context_name)
