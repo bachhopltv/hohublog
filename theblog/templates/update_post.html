@@ -5,10 +5,15 @@
 
 
 {% block content %}
+	
+	{% if user.is_authenticated %}
 
 	<h1>Update Post...</h1>
 	
-	<small><a href="{% url 'delete_post' post.pk %}">Delete</a></small>
+	
+		<small><a href="{% url 'delete_post' post.pk %}">Delete</a></small>
+	
+
 	<br/><br/><br/>
 	<div class="mb-3">
 		<form method="POST">
@@ -17,6 +22,10 @@
 			<button class="btn btn-secondary">Update</button>
 	</div>
 
+	{% else %}
+		You're not allowed here!
+
+	{% endif %}
 
 
 {% endblock %}
