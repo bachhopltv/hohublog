@@ -45,6 +45,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.utils.deprecation.MiddlewareMixin',
 ]
 
 ROOT_URLCONF = 'ablog.urls'
