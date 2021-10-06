@@ -1,21 +1,17 @@
+{% extends 'base.html' %}
 
+{% block content %}
 
-<body>
-	<header>
-	       <h1>My Personal Blog</h1>
-	</header>
+	<h1>My Personal Blog</h1>
 
-    <div class="container">
-       	{% block content %}
-         	{% for post in object_list %}
-             	<div class="post">
-             		<h3><a href="">{{ post.title }}</a></h3>
-               		<p>{{ post.body }}</p>
-            	</div>
-         	{% endfor %}
-        {% endblock content %}
-    </div>
-</body>
+	<ul>
+		{% for post in object_list %}
+			<h4>{{ post.title }}</h4>
+			<p>{{ post.body }}</p><br/>
+		
+		{% endfor %}	
+	</ul>
 
 
 
+{% endblock %}
