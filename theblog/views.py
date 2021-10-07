@@ -38,36 +38,38 @@ class AddPostView(CreateView):
 	form_class = PostForm
 	template_name = 'add_post.html'
 	 
-	    #pass context
+	"""    #pass context
 	def get_context_data(self, *args, **kwargs):
 	    cat_menu = Category.objects.all()
 	    context = super(AddPostView, self).get_context_data(*args, **kwargs)
 	    context["cat_menu"] = cat_menu
 	    return context
+	"""
 
 class UpdatePostView(UpdateView):
 	model = Post
 	form_class = EditForm
 	template_name = 'update_post.html'
 	 
-	    #pass context
+	"""    #pass context
 	def get_context_data(self, *args, **kwargs):
 	    cat_menu = Category.objects.all()
 	    context = super(UpdatePostView, self).get_context_data(*args, **kwargs)
 	    context["cat_menu"] = cat_menu
 	    return context
+	"""
 
 class DeletePostView(DeleteView):
 	model = Post
 	template_name = 'delete_post.html'
 	success_url = reverse_lazy('home')
 	 
-	    #pass context
+	"""    #pass context
 	def get_context_data(self, *args, **kwargs):
 	    cat_menu = Category.objects.all()
 	    context = super(DeletePostView, self).get_context_data(*args, **kwargs)
 	    context["cat_menu"] = cat_menu
 	    return context
 	
-
+	"""
 
