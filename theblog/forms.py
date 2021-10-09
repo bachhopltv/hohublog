@@ -1,7 +1,7 @@
 from django import forms
 from .models import Post
 
-choices = [('hop', 'hop'), ('huong', 'huong')]
+choices = [('hop', 'hop'), ('huong', 'huong'), ('hanh', 'hanh')]
 
 class PostForm(forms.ModelForm):
 	class Meta:
